@@ -323,7 +323,7 @@
       <div class="pb-head">Payment schedule</div>
       <table class="pay-table">
         <tr><th>Total enrolled debt</th><th>Monthly payment</th></tr>
-        <tr><td>$4,000 – $9,999</td><td>$250 / month</td></tr>
+        <tr><td>$4,000 – $9,999</td><td>$220 / month</td></tr>
         <tr><td>$10,000 – $14,999</td><td>$270 / month</td></tr>
         <tr><td>$15,000 – $19,999</td><td>$320 / month</td></tr>
         <tr><td>$20,000 – $24,999</td><td>$370 / month</td></tr>
@@ -438,7 +438,7 @@ const DAYS=[
     {t:"Read: What is debt validation? FDCPA overview & Consumer Shield's 4-step approach",tag:"read"},
     {t:"Read: Accounts we CAN and CANNOT enroll — memorize both lists (Compliance tab)",tag:"read"},
     {t:"Read: Non-sell states — CO, PA, NJ, OR, NC, PR, TX, WA",tag:"read"},
-    {t:"Read: Payment schedule by debt amount ($250–$620/mo) and term rules",tag:"read"},
+    {t:"Read: Payment schedule by debt amount ($220–$620/mo) and term rules",tag:"read"},
     {t:"Quiz: AI Coach — Consumer Shield eligibility rules (10 questions)",tag:"quiz"},
   ]},
   {day:2,title:"CRM setup & Bluerock dialer",time:"~3 hrs",color:"#991b1b",bg:"#fee2e2",tasks:[
@@ -618,7 +618,7 @@ async function getAIReply(){
   const sys=`You are the AI training coach for Lift Lending's Debt Validation (DV) team. You have full knowledge of the company's actual training binder. Key facts:
 
 CONSUMER SHIELD GUIDELINES (Updated March 2026):
-- Minimum debt: $4,000. Min payment: $250. Min enrolled account balance: $100.
+- Minimum debt: $4,000. Min payment: $220. Min enrolled account balance: $100.
 - Term: 24 months under $8,800 debt; 36 months over $8,800.
 - Non-sell (red) states: CO, PA, NJ, OR, NC, PR, TX, WA.
 - CAN enroll: unsecured credit cards, personal loans, lines of credit (not CUs), medical bills, cell phone bills, utility bills, payday loans, peer-to-peer loans, apartment back rent (collections only), auto loan after repo, USAA (no other secured debt), tribal loans (requires tribal doc), business credit if dissolved.
@@ -646,9 +646,9 @@ SHARK TANK: protect files with notes (24hr) or events (max 72hrs). Events expire
 When quizzing: one question at a time, give feedback. When roleplaying: play the skeptical client. Keep responses practical and direct. If rep gives non-compliant answer, call it out immediately with the correct version.`;
 
   try{
-    const res=await fetch("https://liftlending-proxy.chanceblack95.workers.dev/",{
+    const res=await fetch("https://liftlending-proxy.chanceblack95.workers.dev",{
       method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({model:"claude-sonnet-4-5",max_tokens:1000,system:sys,messages:chatHistory})
+      body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:1000,system:sys,messages:chatHistory})
     });
     const data=await res.json();
     const reply=data.content?.map(b=>b.text||"").join("")||"Something went wrong — please try again.";
