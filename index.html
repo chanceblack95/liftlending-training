@@ -280,7 +280,7 @@
       <div class="pb-head">Step 12 — Genie QA call</div>
       <div class="script-block">
         "The last step of the process is a quick QA call with our automated system. They're going to ask you 10 yes or no questions to confirm that you understand the program and everything we've discussed today. What I'm going to do first is review these questions with you myself to make sure you understand everything — then I'll put you on the automated call."<br><br>
-        <em style="color:#888">Review all 13 Genie questions with client (see Genie QA tab). Then 3-way call to 507-690-3245. Stay on the line. Notate time & date in file notes.</em><br><br>
+        <em style="color:#888">Review all 13 Genie questions with client (see Genie QA tab). Then 3-way call to 434-337-4190. Stay on the line. Notate time & date in file notes.</em><br><br>
         <span style="color:#dc2626;font-weight:600">QA Bot: 507-690-3245 &nbsp;|&nbsp; Contract #: 222222222 (nine 2s)</span>
       </div>
       <div class="warn-block" style="margin-top:6px">After QA call complete: STATUS FILE TO "PENDING UNDERWRITING REVIEW"</div>
@@ -324,7 +324,7 @@
       <div class="pb-head">Payment schedule</div>
       <table class="pay-table">
         <tr><th>Total enrolled debt</th><th>Monthly payment</th></tr>
-        <tr><td>$4,000 – $9,999</td><td>$250 / month</td></tr>
+        <tr><td>$4,000 – $9,999</td><td>$220 / month</td></tr>
         <tr><td>$10,000 – $14,999</td><td>$270 / month</td></tr>
         <tr><td>$15,000 – $19,999</td><td>$320 / month</td></tr>
         <tr><td>$20,000 – $24,999</td><td>$370 / month</td></tr>
@@ -332,7 +332,7 @@
         <tr><td>$30,000 – $49,999</td><td>$520 / month</td></tr>
         <tr><td>$50,000+</td><td>$620 / month</td></tr>
       </table>
-      <div style="font-size:12px;color:#888;margin-top:6px">Term: 24 months under $8,800 — 36 months over $8,800. Minimum debt: $5,000. Min payment: $250.</div>
+      <div style="font-size:12px;color:#888;margin-top:6px">Term: 24 months under $8,800 — 36 months over $8,800. Minimum debt: $4,000. Min payment: $220.</div>
     </div>
     <div class="pb-section">
       <div class="pb-head">Non-sell states</div>
@@ -408,7 +408,7 @@
 
   <!-- GENIE QA CALL -->
   <div class="section" id="tab-genie">
-    <div class="info-block"><strong>QA Bot number:</strong> 507-690-3245 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Genie contract #:</strong> 222222222 (nine 2s)<br><strong>3-way merge to:</strong> 507-690-3245 — STAY ON THE LINE. Notate time & date in file notes.</div>
+    <div class="info-block"><strong>QA Bot number:</strong> 507-690-3245 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Genie contract #:</strong> 222222222 (nine 2s)<br><strong>3-way merge to:</strong> 434-337-4190 — STAY ON THE LINE. Notate time & date in file notes.</div>
     <br>
     <div class="warn-block">Review ALL 13 questions with the client before transferring to the automated system.</div>
     <br>
@@ -492,7 +492,7 @@ const DAYS=[
     {t:"Read: What is debt validation? FDCPA overview & Consumer Shield's 4-step approach",tag:"read"},
     {t:"Read: Accounts we CAN and CANNOT enroll — memorize both lists (Compliance tab)",tag:"read"},
     {t:"Read: Non-sell states — CO, PA, NJ, OR, NC, PR, TX, WA",tag:"read"},
-    {t:"Read: Payment schedule by debt amount ($250–$620/mo) and term rules",tag:"read"},
+    {t:"Read: Payment schedule by debt amount ($220–$620/mo) and term rules",tag:"read"},
     {t:"Quiz: AI Coach — Consumer Shield eligibility rules (10 questions)",tag:"quiz"},
   ]},
   {day:2,title:"CRM setup & Bluerock dialer",time:"~3 hrs",color:"#991b1b",bg:"#fee2e2",tasks:[
@@ -674,9 +674,9 @@ async function getAIReply(){
 You are the AI training coach for Lift Lending's Debt Validation (DV) team. You have full knowledge of the company's actual training binder. Key facts:
 
 CONSUMER SHIELD GUIDELINES (Updated March 2026):
-- Minimum debt: $5,000. Min payment: $250. Min enrolled account balance: $100.
+- Minimum debt: $4,000. Min payment: $220. Min enrolled account balance: $100.
 - Term: 24 months under $8,800 debt; 36 months over $8,800.
-- Non-sell (red) states: CO, PA, NJ, OR, NC, PR, CT, WA.
+- Non-sell (red) states: CO, PA, NJ, OR, NC, PR, TX, WA.
 - CAN enroll: unsecured credit cards, personal loans, lines of credit (not CUs), medical bills, cell phone bills, utility bills, payday loans, peer-to-peer loans, apartment back rent (collections only), auto loan after repo, USAA (no other secured debt), tribal loans (requires tribal doc), business credit if dissolved.
 - CANNOT enroll: timeshares, mortgages, federal student loans, IRS tax, accounts with judgments, cross-collateralized, furniture store financing, loans from individuals, installment sales contracts, credit union loans, military accounts, AFES accounts.
 - Client must be employed or have fixed income. No unemployed clients, even on unemployment.
@@ -691,7 +691,7 @@ Never provide legal or tax advice. Never say this will "pay" accounts off.
 
 GROUNDS FOR TERMINATION: giving out office address, calling clients from personal phone, contacting outside 8am-9pm local, storing client PII personally, signing docs for client, pulling credit without permission or after denial, giving back-end info before credit pull, multiple DNC violations, drop-out rate not below 20%.
 
-DV PITCH FLOW: Greet → confirm contact info → ask income & debt (must be $5k+) → get verbal credit pull auth → pull credit (Xactus360 in DPP) → empathize about hardship → pitch Consumer Shield approval → explain program → cover 3 compliance points → monthly budget → banking info → recap → send 3 e-sign docs → Genie QA call.
+DV PITCH FLOW: Greet → confirm contact info → ask income & debt (must be $4k+) → get verbal credit pull auth → pull credit (Xactus360 in DPP) → empathize about hardship → pitch Consumer Shield approval → explain program → cover 3 compliance points → monthly budget → banking info → recap → send 3 e-sign docs → Genie QA call.
 
 GENIE CALL (13 yes/no — correct answers): 1.YES 2.NO 3.YES 4.YES 5.YES 6.YES 7.YES 8.NO 9.YES 10.NO 11.NO 12.NO 13.NO — 3-way to 434-337-4190. Contract# 222222222. Stay on line. Note time & date.
 
