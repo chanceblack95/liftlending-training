@@ -112,6 +112,7 @@
     <button class="tab" onclick="showTab('compliance',this)">CS guidelines</button>
     <button class="tab" onclick="showTab('checklist',this)">File checklist</button>
     <button class="tab" onclick="showTab('genie',this)">Genie QA call</button>
+    <button class="tab" onclick="showTab('warmdown',this)">CS Warmdown</button>
   </div>
 
   <!-- CURRICULUM -->
@@ -323,7 +324,7 @@
       <div class="pb-head">Payment schedule</div>
       <table class="pay-table">
         <tr><th>Total enrolled debt</th><th>Monthly payment</th></tr>
-        <tr><td>$4,000 – $9,999</td><td>$250 / month</td></tr>
+        <tr><td>$4,000 – $9,999</td><td>$220 / month</td></tr>
         <tr><td>$10,000 – $14,999</td><td>$270 / month</td></tr>
         <tr><td>$15,000 – $19,999</td><td>$320 / month</td></tr>
         <tr><td>$20,000 – $24,999</td><td>$370 / month</td></tr>
@@ -335,7 +336,7 @@
     </div>
     <div class="pb-section">
       <div class="pb-head">Non-sell states</div>
-      <div class="warn-block"><strong>CO &nbsp;|&nbsp; PA &nbsp;|&nbsp; NJ &nbsp;|&nbsp; OR &nbsp;|&nbsp; NC &nbsp;|&nbsp; PR &nbsp;|&nbsp; CT &nbsp;|&nbsp; WA</strong> — Do NOT enroll clients from these states</div>
+      <div class="warn-block"><strong>CO &nbsp;|&nbsp; PA &nbsp;|&nbsp; NJ &nbsp;|&nbsp; OR &nbsp;|&nbsp; NC &nbsp;|&nbsp; PR &nbsp;|&nbsp; TX &nbsp;|&nbsp; WA</strong> — Do NOT enroll clients from these states</div>
     </div>
     <div class="pb-section">
       <div class="pb-head">Accounts that CANNOT be enrolled</div>
@@ -427,6 +428,59 @@
       <tr><td>12</td><td>Do you have a bank account at the same institution where you are enrolling a card or loan?</td><td><span class="no-badge">NO</span></td></tr>
       <tr><td>13</td><td>Are any of these accounts business accounts or tied to a business you own?</td><td><span class="no-badge">NO</span></td></tr>
     </table>
+  </div>
+
+  <!-- CS WARMDOWN -->
+  <div class="section" id="tab-warmdown">
+    <div class="fail-block" style="font-size:14px;font-weight:700">⚠️ IF YOU SKIP OR FAIL THIS WARMDOWN YOU WILL BE HOUSED</div>
+    <br>
+    <div class="pb-section">
+      <div class="pb-head">Opening</div>
+      <div class="script-block">
+        "Now the last few steps — we will conduct a recording with an AI bot for quality assurance purposes. Before doing that, I just need to verify this QA checklist to ensure the file is approved smoothly. Are you ready?"
+      </div>
+    </div>
+
+    <div class="pb-section">
+      <div class="pb-head">Step 1 — Account verification</div>
+      <div class="script-block">
+        "First I'm going to verify the account information we have on file. Do you still have that pulled up?"<br>
+        <em style="color:#d97706">(Have client pull up signed documents or Bank App — DO NOT read info to them. They must read it back to you.)</em>
+      </div>
+      <ul class="task-list">
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>What is the name on your bank account?</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>Please verify the spelling of your first and last name? (Is it the same as your Debit Card?)</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>Do you use a middle initial?</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>Please verify the Account Number</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>Please verify the Routing Number</span></li>
+      </ul>
+    </div>
+
+    <div class="pb-section">
+      <div class="pb-head">Step 2 — Payment confirmation</div>
+      <div class="script-block">
+        "Now you agreed to have your first payment scheduled on <strong>[DATE]</strong> for the amount of <strong>$[AMOUNT]</strong> — is that correct?"
+      </div>
+      <div class="warn-block">Client cannot push the payment out more than 30 days or the file will be returned or cancelled.</div>
+      <br>
+      <ul class="task-list">
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>"Work will begin on your file as soon as the first payment is made. Your dedicated attorney will start the process by contacting your creditors to let them know you now have legal representation. Do you understand?"</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>"As part of our services, each payment you make will reflect positively on your credit report — helping increase your credit score and overall ability to loan money. Do you understand?"</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>"I need to make you aware that if you miss your payment, your legal protection will default and you may be subject to collection efforts by your creditors. Does that make sense?"</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>"With that being said, I need to confirm — do you agree to the payment of $[AMOUNT] on [DATE]?"</span></li>
+      </ul>
+    </div>
+
+    <div class="pb-section">
+      <div class="pb-head">Step 3 — Document review</div>
+      <div class="script-block">
+        "Let me quickly review your documents to make sure everything is signed and complete. One moment please…"
+      </div>
+      <ul class="task-list">
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>SSN is included in the documents</span></li>
+        <li class="task-item"><div class="task-dot" style="background:#dbeafe;border-color:#93c5fd;color:#1B3A6B">✓</div><span>All required signatures are completed</span></li>
+      </ul>
+    </div>
   </div>
 
 </div>
@@ -639,11 +693,13 @@ GROUNDS FOR TERMINATION: giving out office address, calling clients from persona
 
 DV PITCH FLOW: Greet → confirm contact info → ask income & debt (must be $4k+) → get verbal credit pull auth → pull credit (Xactus360 in DPP) → empathize about hardship → pitch Consumer Shield approval → explain program → cover 3 compliance points → monthly budget → banking info → recap → send 3 e-sign docs → Genie QA call.
 
-GENIE CALL (13 yes/no — correct answers): 1.YES 2.NO 3.YES 4.YES 5.YES 6.YES 7.YES 8.NO 9.YES 10.NO 11.NO 12.NO 13.NO — 3-way to 507-690-3245. Contract# 222222222. Stay on line. Note time & date.
+GENIE CALL (13 yes/no — correct answers): 1.YES 2.NO 3.YES 4.YES 5.YES 6.YES 7.YES 8.NO 9.YES 10.NO 11.NO 12.NO 13.NO — 3-way to 434-337-4190. Contract# 222222222. Stay on line. Note time & date.
 
 SALES SKILLS: Speed (memorize script, go-to rebuttals, redirect with questions always), Tonality (enthusiastic, professional, mirror client), Control (questions = control, always be closing, try rebuttals 3x before letting off). Pipeline: same-day or next-day callbacks only. Outbound: 3x back-to-back calls, leave voicemails.
 
 SHARK TANK: protect files with notes (24hr) or events (max 72hrs). Events expire 2hrs from start time.
+
+CS WARMDOWN (MANDATORY — skipping or failing will result in being housed): After Genie QA call, run the warmdown in 3 steps. Step 1 — Account Verification: have the client read back their bank account name, first/last name spelling, middle initial, account number, and routing number from their signed docs or bank app. NEVER read this info to them — they must confirm it themselves. Step 2 — Payment Confirmation: confirm the first payment date and amount, then cover 3 points: (1) work begins when first payment is made and their attorney will contact creditors, (2) each payment reflects positively on their credit report, (3) missing a payment defaults their legal protection and they may face collection efforts. Then get verbal agreement on the payment. Step 3 — Document Review: confirm SSN is in the documents and all required signatures are completed. Important: client cannot push payment out more than 30 days or the file will be returned.
 
 When quizzing: one question at a time, give feedback. When roleplaying: play the skeptical client. Keep responses practical and direct. If rep gives non-compliant answer, call it out immediately with the correct version.`;
 
